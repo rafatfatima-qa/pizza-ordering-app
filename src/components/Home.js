@@ -4,22 +4,24 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import pizza from '../assets/pizza-logo.jpg';
 import Options from './Options';
+import OrderList from './OrderList'
+import PlaceOrder from './PlaceOrder'
+import CancelOrder from './CancelOrder'
 import {
   BrowserRouter as Router,
   Switch,
   Route, 
-  withRouter,
   Link,
   useHistory
 } from "react-router-dom";
 
 function Home() {
 
-  // let history = useHistory();
+  let history = useHistory();
 
-  // function routeChange(){ 
-  //   history.push("/options");
-  // }
+  function routeChange(){ 
+    history.push("/options");
+  }
 
  return (
    <div>
@@ -47,9 +49,22 @@ function Home() {
         <Route exact path="/">
             <Home />
           </Route>
+             
         <Route exact path="/options">
             <Options />
-        </Route>   
+        </Route> 
+
+        <Route path="/orderlist">
+            <OrderList />
+          </Route>
+          
+        <Route path="/placeorder">
+            <PlaceOrder />
+          </Route>
+          
+        <Route path="/cancelorder">
+            <CancelOrder />
+          </Route>
         </Switch> 
         </Router> 
     </div>

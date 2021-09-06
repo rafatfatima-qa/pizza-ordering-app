@@ -2,7 +2,7 @@
   "name": "pizza-ordering-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://rafatfatima-qa.github.io/pizza-ordering-app/",
+  "homepage": "https://rafatfatima-qa.github.io/pizza-ordering-app/",
   "proxy": "https://order-pizza-api.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
