@@ -1,6 +1,88 @@
+body{
+  background-image: url('./assets/bg-1.jpg');
+  background-size: cover; 
+  background-position: top center; 
+}
 
 .App {
   text-align: center;
+  background-image: url('./assets/bg-1.jpg');
+  background-size: cover; 
+  background-position: top center; 
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  padding-left: 0rem;
+}
+
+.optionsDiv{
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: rgb(8, 0, 0);
+  font-weight: bold;
+  border: 1px solid #080808;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  margin-top: 250px;
+}
+.orderDivText {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: rgb(8, 0, 0);
+  font-weight: bold;
+  border: 1px solid #080808;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+.placeOrderDivText {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: rgb(8, 0, 0);
+  font-weight: bold;
+  border: 1px solid #080808;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  margin-top: 275px;
+}
+
+.cardDiv{
+  border:rgb(1, 0, 5) solid 1.5px;
+  border-radius: 10px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.logoDiv{
+ 
+  background-image: url('./assets/bg-1.jpg');
+  background-size: cover; 
+  background-position: top center; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -10,7 +92,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
