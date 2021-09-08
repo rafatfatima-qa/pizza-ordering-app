@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/pizza-ordering-app/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/pizza-ordering-app/static/js/main.4f219255.chunk.js",
-    "main.js.map": "/pizza-ordering-app/static/js/main.4f219255.chunk.js.map",
+    "main.css": "/pizza-ordering-app/static/css/main.a9567b37.chunk.css",
+    "main.js": "/pizza-ordering-app/static/js/main.a9142ca1.chunk.js",
+    "main.js.map": "/pizza-ordering-app/static/js/main.a9142ca1.chunk.js.map",
     "runtime-main.js": "/pizza-ordering-app/static/js/runtime-main.2134bef6.js",
     "runtime-main.js.map": "/pizza-ordering-app/static/js/runtime-main.2134bef6.js.map",
     "static/css/2.818011ed.chunk.css": "/pizza-ordering-app/static/css/2.818011ed.chunk.css",
-    "static/js/2.6d240266.chunk.js": "/pizza-ordering-app/static/js/2.6d240266.chunk.js",
-    "static/js/2.6d240266.chunk.js.map": "/pizza-ordering-app/static/js/2.6d240266.chunk.js.map",
+    "static/js/2.91eda5be.chunk.js": "/pizza-ordering-app/static/js/2.91eda5be.chunk.js",
+    "static/js/2.91eda5be.chunk.js.map": "/pizza-ordering-app/static/js/2.91eda5be.chunk.js.map",
     "static/js/3.81fbe019.chunk.js": "/pizza-ordering-app/static/js/3.81fbe019.chunk.js",
     "static/js/3.81fbe019.chunk.js.map": "/pizza-ordering-app/static/js/3.81fbe019.chunk.js.map",
     "index.html": "/pizza-ordering-app/index.html",
     "static/css/2.818011ed.chunk.css.map": "/pizza-ordering-app/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.6dea0f05.chunk.css.map": "/pizza-ordering-app/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.6d240266.chunk.js.LICENSE.txt": "/pizza-ordering-app/static/js/2.6d240266.chunk.js.LICENSE.txt",
+    "static/css/main.a9567b37.chunk.css.map": "/pizza-ordering-app/static/css/main.a9567b37.chunk.css.map",
+    "static/js/2.91eda5be.chunk.js.LICENSE.txt": "/pizza-ordering-app/static/js/2.91eda5be.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/pizza-ordering-app/static/media/bg-1.25235718.jpg",
     "static/media/pizza-logo.685ff9ec.jpg": "/pizza-ordering-app/static/media/pizza-logo.685ff9ec.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2134bef6.js",
     "static/css/2.818011ed.chunk.css",
-    "static/js/2.6d240266.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.4f219255.chunk.js"
+    "static/js/2.91eda5be.chunk.js",
+    "static/css/main.a9567b37.chunk.css",
+    "static/js/main.a9142ca1.chunk.js"
   ]
 }
