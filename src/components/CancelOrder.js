@@ -38,7 +38,7 @@ function CancelOrder() {
                 <div>{pizza.Crust}</div>
                 <div>{pizza.Flavor}</div>
                 <div>{pizza.Size}</div>
-                <button onClick={() => onClickCancel(pizza.Order_ID)}>Cancel Order</button>
+                <button className="btn btn-primary" onClick={() => onClickCancel(pizza.Order_ID)}>Cancel Order</button>
                 <br />
                 <br />
              </div>})}

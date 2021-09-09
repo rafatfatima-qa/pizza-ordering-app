@@ -2,7 +2,7 @@
 - A React JS project.
 
 ## What does this app do?
-- This is a contacts list app in which news have been fetched thru an API.
+- This is a pizza ordering app created using reactjs, we are fetching orders list thru an API, placing an order and Cancelling order in this app.
 
 ## API used:
  https://order-pizza-api.herokuapp.com/api/orders
