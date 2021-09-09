@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Form from 'react-bootstrap/Form'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container'
 
 
 function PlaceOrder() {
@@ -37,51 +39,59 @@ function PlaceOrder() {
         "Timestamp": new Date()
       }
   
-  let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEwODgzNjksIm5iZiI6MTYzMTA4ODM2OSwianRpIjoiMWRiYjdlMjctMmZlZi00ZGEzLWI1NzEtNzM2NGJhOGQ2OWNjIiwiZXhwIjoxNjMxMDg5MjY5LCJpZGVudGl0eSI6InRlc3QiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.MC5RwhMTsU2yr1H-GPTQ5IVXqSzRnSmaIOYjLT1eJug";
-  
-  const requestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
-    body: JSON.stringify(pizzaObject)
+  let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzExMTYyNjEsIm5iZiI6MTYzMTExNjI2MSwianRpIjoiY2FkNWYyZmMtZGJmMy00YzdiLWE2OTQtM2FjMDEzZjNjMDE0IiwiZXhwIjoxNjMxMTE3MTYxLCJpZGVudGl0eSI6InRlc3QiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.Hla7genyNemsc7b-JSd9DBI3fSUHlV2KtNQeyDaanVQ";
+
+const requestOptions = {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+  body: JSON.stringify(pizzaObject)
 };
 
 fetch(`https://order-pizza-api.herokuapp.com/api/orders`, requestOptions)
-    .then(response => { if (response.status == 201) {
-      alert('Your order has been registered')
-    }
-    })}
+  .then(response => { if (response.status == 201) {
+    alert('Your order has been registered')
   }
+  })}
+}
+
   
   return (
     <>
+      <Container>
+
       <Card className = "placeOrderDivText">
       <Card.Body>
 
       <Card.Title>
-      <label for="crust">Crust:</label>
-      <DropdownButton id="dropdown-basic-button" title="Crust" variant="dark" onChange={onChangeCrust}>
-      <Dropdown.Item value="thin">Thin</Dropdown.Item>
-      <Dropdown.Item value="thick">Thick</Dropdown.Item>
-      <Dropdown.Item value="stuffed">Stuffed</Dropdown.Item>
-      </DropdownButton>
+      <Form.Label for="crust">Crust:</Form.Label>
+      <Form.Select name="crust" aria-label="Default select example" onChange={onChangeCrust}>
+      <option>Please Select</option>
+      <option value="THICK">Thick</option>
+      <option value="THIN">Thin</option>
+      <option value="STUFFED">Stuffed</option>
+      </Form.Select>
       </Card.Title>
       <hr />
+
       <Card.Title>
-      <label for="flavor">Flavour:</label>
-      <DropdownButton id="dropdown-basic-button" title="Flavor" variant="dark" onChange={onChangeFlavor}>
-      <Dropdown.Item href="#/action-1">BBQ</Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Fajita</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Veggie Lover</Dropdown.Item>
-      </DropdownButton>
+      <Form.Label for="flavor">Flavor:</Form.Label>
+      <Form.Select name="flavor" aria-label="Default select example" onChange={onChangeFlavor}>
+      <option>Please Select</option>
+      <option value="BBQ">BBQ</option>
+      <option value="FAJITA">Fajita</option>
+      <option value="VEGGIE">Veggie Lover</option>
+      </Form.Select>
       </Card.Title>
       <hr />
+
       <Card.Title>
-      <label for="size">Size:</label>
-      <DropdownButton id="dropdown-basic-button" title="Size" variant="dark" onChange={onChangeSize}>
-      <Dropdown.Item href="#/action-1">Pan</Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Large</Dropdown.Item>
-      </DropdownButton>
+      <Form.Label for="size">Size:</Form.Label>
+      <Form.Select name="size" aria-label="Default select example" onChange={onChangeSize}>
+      <option>Please Select</option>
+      <option value="PAN">Pan</option>
+      <option value="MEDIUM">Medium</option>
+      <option value="LARGE">Large</option>
+      </Form.Select>
       </Card.Title>
       <hr />
 
@@ -89,7 +99,8 @@ fetch(`https://order-pizza-api.herokuapp.com/api/orders`, requestOptions)
       </Card.Body>
       
       </Card>
-    </>
+      </Container>
+      </>
   );
 }
 
