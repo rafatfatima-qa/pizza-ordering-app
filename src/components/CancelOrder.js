@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
+import {useHistory} from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 function CancelOrder() {
+  
+  let history = useHistory();
 
   const [pizzaDetails, setPizzaDetails] = useState([]);
 
@@ -22,7 +26,7 @@ function CancelOrder() {
         headers: { 'Content-Type': 'application/json' },
     };
 
-    fetch('https://order-pizza-api.herokuapp.com/api/orders/${Order_ID}', requestOptions)
+    fetch(`https://order-pizza-api.herokuapp.com/api/orders/${Order_ID}`, requestOptions)
     .then(response => {
         if (response.status == 200) {
             alert('Cancelled successfully')
@@ -38,7 +42,8 @@ function CancelOrder() {
                 <div>{pizza.Crust}</div>
                 <div>{pizza.Flavor}</div>
                 <div>{pizza.Size}</div>
-                <button className="btn btn-primary" onClick={() => onClickCancel(pizza.Order_ID)}>Cancel Order</button>
+                <Button className="btn btn-primary" onClick={() => onClickCancel(pizza.Order_ID)}>Cancel Order</Button>{' '}
+                <Button className="btn btn-primary" style={{ alignItems: 'center'}} onClick = {() => history.push('/options')}>Back</Button>
                 <br />
                 <br />
              </div>})}

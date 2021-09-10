@@ -8,7 +8,7 @@ export default function CustomNavbar(){
 <>
 <Navbar bg="primary" variant="dark">
     <Container>
-    <Navbar.Brand href="/Home">Pizzaria.com</Navbar.Brand>
+    <Navbar.Brand href="/Options">Pizzaria.com</Navbar.Brand>
     </Container>
 </Navbar>
 </>

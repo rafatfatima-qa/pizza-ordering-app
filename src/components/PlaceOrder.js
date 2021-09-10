@@ -6,10 +6,13 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
-
+import {useHistory} from "react-router-dom";
 
 
 function PlaceOrder() {
+
+  let history = useHistory();
+
   const [crust, setCrust] = useState('');
   const [flavor, setFlavor] = useState('');
   const [size, setSize] = useState('');
@@ -40,7 +43,7 @@ function PlaceOrder() {
         "Timestamp": new Date()
       }
   
-  let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzExNzE2OTMsIm5iZiI6MTYzMTE3MTY5MywianRpIjoiMWI0NjRjN2EtNWY0Yy00NDMxLWE2NmMtYTUwYWI4ODZjYjEwIiwiZXhwIjoxNjMxMTcyNTkzLCJpZGVudGl0eSI6InRlc3QiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.IIGhmiLWvKiRgR3ogKCv4PPntW1DXchvwwD2cnWnf0U";
+  let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEyODU2MDQsIm5iZiI6MTYzMTI4NTYwNCwianRpIjoiMDQ4ODk1MmUtMDFiYy00ZTgzLTg2NGUtNTRkZWEwODM3ZDQzIiwiZXhwIjoxNjMxMjg2NTA0LCJpZGVudGl0eSI6InRlc3QiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.zt3mdGJNls1rQnSgbG_MDDyr9KSNZSUExqMfCLREgJ4";
 
 const requestOptions = {
   method: 'POST',
@@ -96,7 +99,8 @@ fetch(`https://order-pizza-api.herokuapp.com/api/orders`, requestOptions)
       </Card.Title>
       <hr />
 
-      <Button className="btn btn-primary" onClick={handleClick}>Place Order</Button>
+      <Button className="btn btn-primary" onClick={handleClick}>Place Order</Button> {' '}
+      <Button className="btn btn-primary" style={{ alignItems: 'center'}} onClick = {() => history.push('/options')}>Back</Button>
       </Card.Body>
       
       </Card>
