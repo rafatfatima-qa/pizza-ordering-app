@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {useHistory} from "react-router-dom";
+import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
+import {useHistory} from "react-router-dom";
 
 function CancelOrder() {
   
@@ -37,20 +39,23 @@ function CancelOrder() {
 
   return (
     <>
-    <div>{pizzaDetails.map((pizza) => {
-      return <div>
-                <div>{pizza.Crust}</div>
-                <div>{pizza.Flavor}</div>
-                <div>{pizza.Size}</div>
+    {pizzaDetails.map((pizza) => (
+          <div>
+             <Card className = "App" style={{ width: '22rem', padding: '10px 40px'}}></Card>
+             <div className = "orderDivText">
+              <Card.Body>
+              <Card.Title>Crust: {pizza.Crust}</Card.Title>
+              <Card.Title>Flavor: {pizza.Flavor}</Card.Title>
+              <Card.Title>Size: {pizza.Size}</Card.Title>
+              </Card.Body>
                 <Button className="btn btn-primary" onClick={() => onClickCancel(pizza.Order_ID)}>Cancel Order</Button>{' '}
                 <Button className="btn btn-primary" style={{ alignItems: 'center'}} onClick = {() => history.push('/options')}>Back</Button>
                 <br />
                 <br />
-             </div>})}
-    </div>
+                </div>
+          </div>
+          ))}
     </>
-  );
-}
-
+  );}
 
 export default CancelOrder;

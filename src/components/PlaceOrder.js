@@ -43,7 +43,7 @@ function PlaceOrder() {
         "Timestamp": new Date()
       }
   
-  let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEyODU2MDQsIm5iZiI6MTYzMTI4NTYwNCwianRpIjoiMDQ4ODk1MmUtMDFiYy00ZTgzLTg2NGUtNTRkZWEwODM3ZDQzIiwiZXhwIjoxNjMxMjg2NTA0LCJpZGVudGl0eSI6InRlc3QiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.zt3mdGJNls1rQnSgbG_MDDyr9KSNZSUExqMfCLREgJ4";
+  let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEzNDEwOTgsIm5iZiI6MTYzMTM0MTA5OCwianRpIjoiODJjMGE4ZGQtMjFlNy00ZGRhLTkwYWUtOGZhZGI0ZDZkOWUzIiwiZXhwIjoxNjMxMzQxOTk4LCJpZGVudGl0eSI6InRlc3QiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.vqfzkwtBOxq7l4F1L-kMRJ7Rn9fL6-94O51oYOv1iZQ";
 
 const requestOptions = {
   method: 'POST',
