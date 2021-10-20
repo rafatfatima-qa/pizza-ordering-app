@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 
 
-export default function Main() {
+const Main = () => {
     return (
 <Router> 
     <Switch>
@@ -45,3 +45,5 @@ export default function Main() {
 </Router> 
 );
 }
+
+export default Main;

@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import {useHistory} from "react-router-dom";
 
-function CancelOrder() {
-  
+const CancelOrder = () => {
   let history = useHistory();
 
   const [pizzaDetails, setPizzaDetails] = useState([]);
@@ -20,7 +19,7 @@ function CancelOrder() {
         .then(response => response.json())
         .then(data => setPizzaDetails(data))
     },
- []);
+ []); 
 
  const onClickCancel = (Order_ID) => {
     const requestOptions = {

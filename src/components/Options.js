@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function Options(){
+const Options = () => {
   return (
     
        <div className = "text-center optionsDiv">
